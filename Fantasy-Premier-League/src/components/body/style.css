@@ -1,0 +1,18 @@
+/* HOME */
+/* Background */
+.pl-background {
+  background-image: url(../../assets/PremierLeague.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.pl-logo {
+  background-image: url(../../assets/PremierLeagueLogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.position-size {
+  @apply flex justify-end items-center m-1 rounded-2xl font-thin text-xs md:text-2xl;
+}
+.hover-cursor{
+    @apply hover:cursor-pointer hover:scale-105;
+}
