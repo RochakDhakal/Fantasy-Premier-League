@@ -16,3 +16,10 @@
 .hover-cursor{
     @apply hover:cursor-pointer hover:scale-105;
 }
+/* Page Not Found */
+.pnf-bg{
+  background-image: url(../../assets/PremierLeague.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./style.css"
 import PLLogo from "../../assets/PremierLeagueLogo.png"
+import { Link } from "react-router-dom";
 
 function Header() {
+/* The code snippet is using the `useState` hook from React to create a state variable called
+`isNavOpen` and a function called `setIsNavOpen` to update the state. The initial value of
+`isNavOpen` is set to `false`. */
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleNavToggle = () => {
@@ -11,12 +15,12 @@ function Header() {
   return (
     <nav className="bg-white border-gray-200 dark:bg-violet-800">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img src={PLLogo} className="h-8 mr-3" alt="Premier League Logo" />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-900">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-gray-900 hover:text-white">
             Premier League Stats
           </span>
-        </a>
+        </Link>
         <button
           onClick={handleNavToggle}
           type="button"
@@ -49,40 +53,40 @@ function Header() {
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-violet-800 md:dark:bg-violet-800 dark:border-violet-800">
             <li>
-              <a
-                href="#"
+              <Link
+              to="/fplstats"
                 className="header-list"
                 onClick={handleNavToggle}
               >
                 FPL
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/fixtures"
                 onClick={handleNavToggle}
                 className="header-list"
               >
                 Fixtures
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/players"
                 className="header-list"
                 onClick={handleNavToggle}
               >
                 Players
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/live"
                 className="header-list"
                 onClick={handleNavToggle}
               >
                 Live
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
