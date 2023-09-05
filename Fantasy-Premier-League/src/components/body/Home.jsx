@@ -9,7 +9,7 @@ function Home() {
 
   const PARAMS = {
     method: "GET",
-    url: `https://cors-anywhere.herokuapp.com/${
+    url: `${
       import.meta.env.VITE_BASE_URL
     }bootstrap-static/`,
     headers: {
@@ -19,7 +19,7 @@ function Home() {
   const getData = async () => {
     try {
       const response = await axios(PARAMS);
-      console.log("Response", response);
+      console.log("Response", response.data);
     } catch (e) {
       console.log("Error",e)
     }
